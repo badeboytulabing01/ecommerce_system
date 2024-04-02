@@ -1,0 +1,149 @@
+/* Reset CSS */
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+ 
+ .container,
+ .form-container {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+   padding-bottom: 60px;
+   background-image: url('img/registerbg.png'); 
+   background-size: cover;
+ }
+ 
+ .container .content,
+ .form-container form {
+   text-align: center;
+   
+   
+ }
+ 
+ .container .content h3 span {
+   background: rgb(14, 13, 13);
+   color: #fff;   
+   border-radius: 5px;
+   padding: 0 15px;
+   
+ }
+
+ .column h3{
+   font-size: 30px;
+ }
+ 
+ .form-container form {
+   padding: 20px;
+   border-radius: 15px;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+   background: #d3d0d0;
+   text-align: left;
+   width: 700px;   
+   background-size: cover;
+   background-color: rgba(255, 255, 255, 0.3);
+ }
+ 
+ .form-container form .column {
+   width: 50%;
+   display: inline-block;
+   vertical-align: top;
+ }
+ 
+ .form-container form .column:nth-child(2) {
+   margin-top: -358px;   
+   margin-left: 55%; 
+ }
+ 
+ .form-container form p {
+   margin-top: 10px;
+   font-size: 20px;
+   color: #34315c;
+   text-align: left;
+ }
+ 
+ .form-container form span {
+   margin-top: 10px;
+   font-size: 20px;
+   color: #34315c;
+   text-align: right;
+ }
+
+ 
+ .form-container form input,
+ .form-container form select {
+   width: calc(100% - 50px); 
+   padding: 10px 15px;
+   font-size: 17px;
+   margin: 8px 0;
+   background: #eee;
+   border-radius: 5px;
+ }
+ 
+ .form-container form select option {
+   background: #fff;
+ }
+ 
+ .form-container form .form-btn {
+   background: #999898;
+   color: rgb(27, 26, 26);
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+   margin-top: -50px;
+   width: 30%;
+ }
+ 
+ .form-container form .form-btn:hover {
+   background: rgb(41, 40, 40);
+   color: #fff;
+ }
+
+ .form-container form .form-btn1 {
+   background: #999898;
+   color: rgb(27, 26, 26);
+   text-transform: capitalize;
+   font-size: 18px;
+   cursor: pointer;   
+   width: 92.5%;
+ }
+ 
+ .form-container form .form-btn1:hover {
+   background: rgb(41, 40, 40);
+   color: #fff;
+ }
+ 
+ .form-container form .error-msg {
+   margin: 10px 0;
+   display: block;
+   background: rgb(27, 27, 27);
+   color: #fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding: 10px;
+ }
+ 
+ .login-image {
+   width: 35%; 
+   height: auto; 
+   margin-right: 20px; 
+ }
+ 
+ input[type="number"]::-webkit-inner-spin-button,
+ input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+
+ .login-link {
+   
+   text-align: right; 
+   margin-left: 16%; 
+ }
+ 
