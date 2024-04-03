@@ -11,7 +11,10 @@
 
 </head>
 <body>
-   
+   <?php
+    require_once("class.php");
+     $doggy->user_login();
+   ?>
 <div class="form-container">
    <img src="img/loginpic.svg" alt="Image" class="login-image">
    <form action="" method="post">

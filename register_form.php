@@ -11,7 +11,8 @@
 
 </head>
 <body>
-   
+  <?php require_once("class.php");?>
+  <?php $doggy->register();?>
 <div class="form-container">
   <form action="" method="POST">
     <div class="column">
@@ -35,7 +36,7 @@
       <p>Confirm Password</p> 
       <input type="password" name="cpassword" required placeholder="Confirm your password">
     </div>
-    <input type="submit" name="submit" value="Register Now" class="form-btn">
+    <input type="submit" name="register" value="Register Now" class="form-btn">
     <span class="login-link">Already have an account? <a href="login_form.php">Log in here</a></span>
   </form>
 </div>
