@@ -3,9 +3,14 @@
   <html lang="en">
 <?php $templateLoader->headfile();?>
 <body>
-<div class="container">
-   <div class="row">
-        <h1 class="text-danger">Hello</h1>
-   </div>
-</div>
+ <?php $templateLoader->navigation();?>
+ <p class="text-center text-dark fw-bold">Lörem ipsum povis darovis, tetrassa vir jag monor nevis i pregen. </p>
+<?php $templateLoader->banner();?>
+
+<?php require_once("template/display_product.php");?>
+
+
+<?php $templateLoader->footer();?>
+
+
 <?php $templateLoader->bottomfile();?>

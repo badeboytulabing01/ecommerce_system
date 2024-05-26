@@ -24,8 +24,6 @@ class TemplateLoader {
            require_once("template/navbar{$file}.php");
 
         } 
-        
-        
     }
 
     public function footer(){
@@ -39,6 +37,21 @@ class TemplateLoader {
             require_once("template/modal{$file}.php");
         }
     }
+
+    public function banner(){
+        foreach($this->template_files as $file){
+            require_once("template/banner{$file}.php");
+        }
+    }
+
+ /*    public function session(){
+        foreach($this->template_files as $file){
+            require_once("connection/banner{$file}.php");
+        }
+    } */
+
+
+
 
 
 

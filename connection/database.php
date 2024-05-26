@@ -2,4 +2,4 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db_name = "db_oop";
+$db_name = "db_ecommerce";
