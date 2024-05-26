@@ -3,7 +3,7 @@
         <div class="nav-links">
           <ul>            
           <i class="fas fa-shopping-cart"></i> <li><a href="addtocart.php">Cart</a></li>
-          <i class="fa-regular fa-user"></i><li><a href="login_form.php">Login/Sign-up</a></li>
+          <i class="fa-regular fa-user"></i><li><a href="login.php">Login/Sign-up</a></li>
 
         </div>
       </nav>
