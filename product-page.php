@@ -3,115 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawfect Shoppe</title>
-    <link rel="stylesheet" href="css/product.css">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="css/productpage.css">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="css/nav1.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/249726be58.js" crossorigin="anonymous"></script>
+   
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <h1>Pawfect Shoppe</h1>
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Food</a></li>
-                    <li><a href="#">Treats</a></li>
-                    <li><a href="#">Supplies</a></li>
-                    <li><a href="#">Pharmacy</a></li>
-                </ul>
-            </nav>
-            <div class="cart">
-                <a href="#">Cart</a>
-                <span>Gretchen Stanton</span>
-            </div>
-        </div>
-    </header>
+<section class="header">
+     <?php include("inc/nav.php"); ?>
+     <?php include("inc/nav1.php"); ?>
+    </section>    
     <main>
-        <div class="breadcrumb">
-            <a href="#">Home</a> > <a href="#">Food</a> > <span>Infraryns Ogilogi</span>
+        <div class="breadcrumbs">
+            <a href="index.php">Home</a> > <span>Food</span>
         </div>
-        <h2>Infraryns Ogilogi</h2>
-        <div class="sort-button">
-            <button onclick="sortProducts()">Sort by Rating</button>
-        </div>
-        <div class="products-grid">
-            <div class="product-card" onclick="location.href='#'">
-                <div class="product-image"></div>
-                <div class="product-details">
-                    <p class="product-name">Product Name</p>
-                    <p class="product-rating">⭐⭐⭐⭐ 4.5/5</p>
-                    <p class="product-price">Price</p>
-                </div>
-            </div>
-            <div class="product-card" onclick="location.href='#'">
-                <div class="product-image"></div>
-                <div class="product-details">
-                    <p class="product-name">Product Name</p>
-                    <p class="product-rating">⭐⭐⭐⭐ 4.2/5</p>
-                    <p class="product-price">Price</p>
-                </div>
-            </div>
-            <div class="product-card" onclick="location.href='#'">
-                <div class="product-image"></div>
-                <div class="product-details">
-                    <p class="product-name">Product Name</p>
-                    <p class="product-rating">⭐⭐⭐⭐⭐ 5.0/5</p>
-                    <p class="product-price">Price</p>
-                </div>
-            </div>
-            <div class="product-card" onclick="location.href='#'">
-                <div class="product-image"></div>
-                <div class="product-details">
-                    <p class="product-name">Product Name</p>
-                    <p class="product-rating">⭐⭐⭐ 3.5/5</p>
-                    <p class="product-price">Price</p>
-                </div>
-            </div>
-            <div class="product-card" onclick="location.href='#'">
-                <div class="product-image"></div>
-                <div class="product-details">
-                    <p class="product-name">Product Name</p>
-                    <p class="product-rating">⭐⭐⭐⭐ 4.0/5</p>
-                    <p class="product-price">Price</p>
-                </div>
-            </div>
-            <div class="product-card" onclick="location.href='#'">
-                <div class="product-image"></div>
-                <div class="product-details">
-                    <p class="product-name">Product Name</p>
-                    <p class="product-rating">⭐⭐⭐⭐⭐ 4.8/5</p>
-                    <p class="product-price">Price</p>
-                </div>
-            </div>
-            <div class="product-card" onclick="location.href='#'">
-                <div class="product-image"></div>
-                <div class="product-details">
-                    <p class="product-name">Product Name</p>
-                    <p class="product-rating">⭐⭐⭐⭐ 4.3/5</p>
-                    <p class="product-price">Price</p>
-                </div>
-            </div>
-            <div class="product-card" onclick="location.href='#'">
-                <div class="product-image"></div>
-                <div class="product-details">
-                    <p class="product-name">Product Name</p>
-                    <p class="product-rating">⭐⭐⭐ 3.8/5</p>
-                    <p class="product-price">Price</p>
-                </div>
-            </div>
-            <div class="product-card" onclick="location.href='#'">
-                <div class="product-image"></div>
-                <div class="product-details">
-                    <p class="product-name">Product Name</p>
-                    <p class="product-rating">⭐⭐⭐⭐⭐ 5.0/5</p>
-                    <p class="product-price">Price</p>
-                </div>
+        <div class="product-header">
+            <h1>Products</h1>
+            <div class="sort-by">
+                <label for="sort">Sort By:</label>
+                <select id="sort">
+                    <option value="category1">Category 1</option>
+                    <option value="category2">Category 2</option>
+                    <option value="category3">Category 3</option>
+                    <option value="category4">Category 4</option>
+                    <option value="rating">Rating</option>
+                </select>
             </div>
         </div>
-        <div class="view-all">
-            <button onclick="location.href='#'">View All Products</button>
+        <div class="products-grid" id="products-grid">
+            <!-- Product items will be dynamically inserted here -->
+        </div>
+        <div class="pagination">
+            <button id="prev-page" disabled>Previous</button>
+            <button id="next-page">Next</button>
         </div>
     </main>
-    <script src="js/product.js"></script>
+    <?php include("footer.php"); ?>
+    <script src="js/productpage.js"></script>
 </body>
 </html>

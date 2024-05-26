@@ -1,13 +1,23 @@
 // productview.js
+
+const SHIPPING_FEE = 10; // Define the shipping fee
+
 document.getElementById('add-to-cart-button').addEventListener('click', function() {
     const productName = document.querySelector('.product-info h2').innerText;
-    const productPrice = document.querySelector('.product-price').innerText;
-    const quantity = document.getElementById('quantity').value;
+    const productPrice = parseFloat(document.querySelector('.product-price').innerText.replace('$', ''));
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const selectedFlavor = document.querySelector('.flavors .selected') ? document.querySelector('.flavors .selected').innerText : 'N/A';
+    const selectedSize = document.querySelector('.sizes .selected') ? document.querySelector('.sizes .selected').innerText : 'N/A';
+
+    // Calculate total price including shipping fee
+    const totalPrice = (productPrice * quantity) + SHIPPING_FEE;
 
     const productDetails = {
         name: productName,
-        price: productPrice,
-        quantity: quantity
+        price: totalPrice, // Total price including shipping fee
+        quantity: quantity,
+        flavor: selectedFlavor,
+        size: selectedSize
     };
 
     // Store product details in localStorage

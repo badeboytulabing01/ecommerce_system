@@ -27,7 +27,7 @@
                 </div>
                 
                 <div class="forgot-password">
-                    <a href="#">Forgot password?</a>
+                    <a href="forgotpass.php">Forgot password?</a>
                 </div>
                 
                 <button type="submit">Log In</button>
