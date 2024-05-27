@@ -1,3 +1,9 @@
+<?php   
+require_once("function/classAso.php");
+$dogshop->registration();
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,15 +22,15 @@
     <main>
         <div class="signup-container">
             <h2>Sign Up</h2>
-            <form id="signupForm" class="signup-form" onsubmit="handleSignUp(event)">
+            <form method="POST" id="signupForm" class="signup-form" onsubmit="handleSignUp(event)">
                <div class="form-group">
                     <div>
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" required>
+                        <input type="text" id="first-name" name="first_name" required>
                     </div>
                     <div>
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" required>
+                        <input type="text" id="last-name" name="last_name" required>
                     </div>
                 </div>
                 
@@ -35,7 +41,7 @@
                     </div>
                     <div>
                         <label for="contact-number">Contact Number</label>
-                        <input type="text" id="contact-number" name="contact-number" required>
+                        <input type="text" id="contact-number" name="contact" required>
                     </div>
                 </div>
                 
@@ -62,7 +68,7 @@
                     </div>
                 </div>
                 
-                <button type="submit">Sign up</button>
+                <button type="submit" name="registration">Sign up</button>
             </form>
             <p>Already have an account? <a href="login.php">Log in here</a></p>
         </div>
@@ -84,19 +90,6 @@
             <button onclick="redirectToIndex()">Go to Home</button>
         </div>
     </div>
-    <script>
-        function handleSignUp(event) {
-            event.preventDefault();
-            document.getElementById('popup').style.display = 'flex';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-
-        function redirectToIndex() {
-            window.location.href = 'index.php';
-        }
-    </script>
+    
 </body>
 </html>

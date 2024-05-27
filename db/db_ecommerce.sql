@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2024 at 06:10 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Generation Time: May 27, 2024 at 06:02 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,16 +36,16 @@ CREATE TABLE `tbl_user` (
   `email` varchar(200) NOT NULL,
   `address` longtext NOT NULL,
   `password` varchar(300) NOT NULL,
-  `date_create` datetime(6) NOT NULL DEFAULT current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `date_create` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `access` varchar(300) NOT NULL DEFAULT 'user'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `fname`, `lname`, `username`, `contact_number`, `email`, `address`, `password`, `date_create`) VALUES
-(1, 'Bade Boy', 'Tulabing', 'badeboy', '090909090', 'badeboytulabing0127@gmail.com', 'las pinas', '$2y$10$eQ1EYri3q5ahmJh6uaUuxuvufci07lYK2U9WJlc7wsJI7hjPjen.O', '2024-04-17 20:27:12.868907'),
-(2, '', '', '', '', '', '', '$2y$10$khfGv8gceP0T9SDRD9UFKOKvauhno.Ph4AMA/xAUQ2WXk7kg7Cz9.', '2024-04-20 08:42:46.514036');
+INSERT INTO `tbl_user` (`user_id`, `fname`, `lname`, `username`, `contact_number`, `email`, `address`, `password`, `date_create`, `access`) VALUES
+(1, 'Jan', 'Cruz', 'JannyBravo', '93423423233442333232423432434', 'jan@gmail.com', 'Mambog', 'd294589423574ed8f3e352296cdce9c5', '2024-05-27 11:39:41.697428', 'user');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +65,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
