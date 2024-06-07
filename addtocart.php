@@ -6,28 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pawfect Shoppe - Cart</title>
     <link rel="stylesheet" href="css/addtocart.css">
+    <link rel="stylesheet" href="css/nav.css">    
     <script src="https://www.paypal.com/sdk/js?client-id=AQT4EM_LHM8qCUf3EJqH6iSXqCZz39FFZdzF127CM0MHqLOIPJgxPR_nFeKomKtFzgFTNi8IPxKYtC35"></script>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <h1>Pawfect Shoppe</h1>
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Food</a></li>
-                    <li><a href="#">Treats</a></li>
-                    <li><a href="#">Supplies</a></li>
-                    <li><a href="#">Pharmacy</a></li>
-                </ul>
-            </nav>
-            <div class="cart">
-                <a href="#">Cart</a>
-                <span>Gretchen Stanton</span>
-            </div>
-        </div>
+    <section class="header">
+     <?php include("inc/nav.php"); ?>     
+    </section>
     </header>
     
     <!-- Main Content -->
@@ -94,6 +81,6 @@
         }
 
         
-    </script>
+    </script>   
 </body>
 </html>

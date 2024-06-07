@@ -4,34 +4,6 @@ body {
     background-color: #f0f0f0;
 }
 
-header {
-    background-color: #1136a0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-}
-
-header .logo img {
-    width: 170px;
-    height: 50px;
-    margin-right: 5px;
-}
-
-header .logo span {
-    color: rgb(233,229,189);
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo{
-    margin-left: -1400px;
-}
 
 main {
     display: flex;

@@ -5,27 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pawfect Shoppe - Product</title>
     <link rel="stylesheet" href="css/productview.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <h1>Pawfect Shoppe</h1>
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Food</a></li>
-                    <li><a href="#">Treats</a></li>
-                    <li><a href="#">Supplies</a></li>
-                    <li><a href="#">Pharmacy</a></li>
-                </ul>
-            </nav>
-            <div class="cart">
-                <a href="#">Cart</a>
-                <span>Gretchen Stanton</span>
-            </div>
-        </div>
+    <section class="header">
+     <?php include("inc/nav.php"); ?>     
+    </section>
     </header>
     
     <!-- Main Content -->

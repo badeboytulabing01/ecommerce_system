@@ -1,9 +1,3 @@
-<?php   
-require_once("function/classAso.php");
-$dogshop->registration();
-
- ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,26 +5,26 @@ $dogshop->registration();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="index.php"><img src="img/logo.png"></a>
-            <span>Pawfect Shoppe</span>
-        </div>
+    <section class="header">
+     <?php include("inc/nav.php"); ?>     
+    </section>
     </header>
     <main>
         <div class="signup-container">
             <h2>Sign Up</h2>
-            <form method="POST" id="signupForm" class="signup-form" onsubmit="handleSignUp(event)">
+            <form id="signupForm" class="signup-form" onsubmit="handleSignUp(event)">
                <div class="form-group">
                     <div>
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first_name" required>
+                        <input type="text" id="first-name" name="first-name" required>
                     </div>
                     <div>
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last_name" required>
+                        <input type="text" id="last-name" name="last-name" required>
                     </div>
                 </div>
                 
@@ -41,7 +35,7 @@ $dogshop->registration();
                     </div>
                     <div>
                         <label for="contact-number">Contact Number</label>
-                        <input type="text" id="contact-number" name="contact" required>
+                        <input type="text" id="contact-number" name="contact-number" required>
                     </div>
                 </div>
                 
@@ -68,7 +62,7 @@ $dogshop->registration();
                     </div>
                 </div>
                 
-                <button type="submit" name="registration">Sign up</button>
+                <button type="submit">Sign up</button>
             </form>
             <p>Already have an account? <a href="login.php">Log in here</a></p>
         </div>
@@ -90,6 +84,19 @@ $dogshop->registration();
             <button onclick="redirectToIndex()">Go to Home</button>
         </div>
     </div>
-    
+    <script>
+        function handleSignUp(event) {
+            event.preventDefault();
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function redirectToIndex() {
+            window.location.href = 'index.php';
+        }
+    </script>
 </body>
 </html>

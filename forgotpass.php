@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
     <link rel="stylesheet" href="css/forgotpass.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.php"><img src="img/logo.png" alt="Pawfect Shoppe Logo"></a>
-            <span>Pawfect Shoppe</span>
-        </div>
+<header>
+    <section class="header">
+     <?php include("inc/nav.php"); ?>     
+    </section>
     </header>
     <main>
         <div class="forgot-password-container">

@@ -1,8 +1,3 @@
-<?php  
- require_once("function/classAso.php");
- $dogshop->usersLogin();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,33 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.php"><img src="img/logo.png"></a>
-            <span>Pawfect Shoppe</span>
-        </div>
+<header>
+    <section class="header">
+     <?php include("inc/nav.php"); ?>     
+    </section>
     </header>
     <main>
         <div class="login-container">
             <h2>Log In</h2>
-            <form method="POST" action="<?php htmlspecialchars("PHP_SELF"); ?>">
-                <input type="hidden" name="access" value="user"> 
-                                <label for="email">Email</label>
-                <input type="email" id="email" name="emailLog" required>
+            <form>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
                 
                 <label for="password">Password</label>
                 <div class="password-container">
-                    <input type="password" id="password" name="passlog" required>
+                    <input type="password" id="password" name="password" required>
                     <span class="toggle-password">👁️</span>
                 </div>
                 
                 <div class="forgot-password">
-                    <a href="#">Forgot password?</a>
+                    <a href="forgotpass.php">Forgot password?</a>
                 </div>
                 
-                <button type="submit" name="user-log">Log In</button>
+                <button type="submit">Log In</button>
             </form>
             <p>Still don't have an account? <a href="register.php">Register here</a></p>
         </div>
