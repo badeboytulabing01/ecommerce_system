@@ -4,7 +4,7 @@
 <script type="text/javascript" src="js/aos.js"></script>
 <script type="text/javascript" src="js/aos-init.js"></script>
 <script type="text/javascript" src="js/registrationvalidate.js"></script>
-<script type="text/javascript" src="js/loginvalidate.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
 <script type="text/javascript" src="js/employee_validate.js"></script>
 <script type="text/javascript" src="js/ceo.js"></script>
