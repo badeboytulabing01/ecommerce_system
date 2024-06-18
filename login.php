@@ -1,49 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/nav.css">
-</head>
-<body>
-<header>
-    <section class="header">
-     <?php include("inc/nav.php"); ?>     
-    </section>
-    </header>
-    <main>
-        <div class="login-container">
-            <h2>Log In</h2>
-            <form>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="password">Password</label>
-                <div class="password-container">
-                    <input type="password" id="password" name="password" required>
-                    <span class="toggle-password">👁️</span>
-                </div>
-                
-                <div class="forgot-password">
-                    <a href="forgotpass.php">Forgot password?</a>
-                </div>
-                
-                <button type="submit">Log In</button>
-            </form>
-            <p>Still don't have an account? <a href="register.php">Register here</a></p>
+  <?php
+   require_once("mainClass.php");
+   $ecomerce->login();
+
+  ?>
+  <!DOCTYPE html>
+  <html lang="en">
+  <?php require_once "parts/head.php"; ?>
+
+  <body>
+  <!-- navigation -->
+   <?php require_once "parts/home_controller/home_nav.php"; ?>
+   <!-- search bar -->
+   <?php require_once "parts/home_controller/home_search.php"; ?>
+
+    <!-- Main Content -->
+    <div class="container-fluid" id="login_page">
+      <div class="row main-content bg-success text-center">
+        <div class="col-md-4 text-center company__info">
+          <span class="company__logo"><h2><img src="img/logo.png" class="img-fluid"></h2></span>
+          <h4 class="company_title"></h4>
         </div>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <p>Questions? We're here 24 hours a day:</p>
-            <p>Shop.co © 2000-2023, All Rights Reserved</p>
-            <div class="footer-links">
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
+        <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+          <div class="container-fluid">
+            <div class="row">
+              <h2>Welcome to Pawfect shop! Please login</h2>
             </div>
+            <div class="row">
+              <form name="frmLog" method="post" id="loginForm"  action="<?php htmlspecialchars("PHP_SELF"); ?>" class="form-group">
+                <div class="row">
+                  <input type="text" name="userLog" id="userLog" class="form__input" placeholder="Username">
+                </div>
+                <div class="row">
+                  <!-- <span class="fa fa-lock"></span> -->
+                  <input type="password" name="password" id="password" class="form__input" placeholder="Password">
+                </div>
+                <!-- <div class="row">
+                  <input type="checkbox" name="remember_me" id="remember_me" class="">
+                  <label for="remember_me">Remember Me!</label>
+                </div> -->
+                <div class="row">
+                  <input type="submit" value="Submit" class="btn" name="submit"  id="submit" onclick="return valLog();">
+                </div>
+              </form>
+            </div>
+            <div class="row">
+              <p>Don't have an account? <a href="signup.php">Register Here</a></p>
+            </div>
+          </div>
         </div>
-    </footer>
-</body>
-</html>
+      </div>
+    </div>
+    
+
+   
+
+   <?php 
+    require_once "parts/footer.php";
+    ?>
+  <!-- end of footer -->
+
+   <?php 
+    require_once "parts/js.php";
+    ?>
+    <!-- end of js -->
+  </body>
+  </html>
