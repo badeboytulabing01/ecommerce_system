@@ -91,7 +91,7 @@
                 </ul>
               </li>
               <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Fish</a>
+                <a class="dropdown-item" href="#">Chicken</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Wet Food</a></li>
                   <li><a class="dropdown-item" href="#">Dry Food</a></li>
